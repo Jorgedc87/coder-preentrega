@@ -12,23 +12,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>La Posta de Juli</title>
 </head>
 <body>
-  <!-- Header y Navbar -->
-  <header class="font-montserrat">
-    <nav>
+  <!-- Navbar Desktop -->
+  <header class="font-montserrat navbar-desktop">
+    <nav class="">
       <ul>
-        <li><a href="/pages/productos.html">Productos</a></li>
-        <li><a href="/pages/nosotros.html">Nosotros</a></li>
-        <li><a href="/" class="img-header"><img src="/img/logo.png" alt="logo la posta de juli"></a></li>
-        <li><a href="/pages/preguntas-frecuentes.html" class="faq">Preguntas Frecuentes</a></li>
-        <li><a href="/pages/contacto.html">Contacto</a></li>
+        <li><a href="../pages/productos.html">Productos</a></li>
+        <li><a href="../pages/nosotros.html">Nosotros</a></li>
+        <li><a href="../" class="img-header"><img src="../img/logo.png" alt="logo la posta de juli"></a></li>
+        <li><a href="../pages/preguntas-frecuentes.html" class="faq">Preguntas Frecuentes</a></li>
+        <li><a href="../pages/contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
+
+  <!-- Navbar Mobile -->
+  <header class="font-montserrat navbar-mobile">
+    <nav class="">
+      <div class="text-center">
+        <img src="../img/logo.png" alt="logo la posta de juli">
+      </div>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li> |
+        <li><a href="../pages/productos.html">Productos</a></li> |
+        <li><a href="../pages/nosotros.html">Nosotros</a></li> |
+        <li><a href="../pages/preguntas-frecuentes.html">FAQ</a></li> |
+        <li><a href="../pages/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
     <section class="hero hero-faqs">
       <div class="title-hero-faqs">
@@ -42,26 +58,61 @@
       <!-- Title -->
       <h2>Preguntas y Respuestas</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo sagittis placerat. Duis eu convallis massa. Integer condimentum mauris a lacinia egestas. Praesent porttitor libero enim, vitae dignissim dui luctus in. Nunc malesuada nulla a mi rutrum pharetra. </p>
-      <!-- Pregunta 1 -->
-      <details>
-        <summary>¿Cuál es el horario de atención?</summary>
-        <p>De lunes a viernes de 9 a 18hs.</p>
-      </details>
-      <!-- Pregunta 2 -->
-      <details>
-        <summary>¿Como se compra?</summary>
-        <p>Realiza tu pedido con 48 hs de anticipación vía WhatsApp.</p>
-      </details>
-      <!-- Pregunta 3 -->
-      <details>
-        <summary>¿Hacen envíos?</summary>
-        <p>Solo en Avellaneda, Buenos Aires, Zona Sur.</p>
-      </details>
-      <!-- Pregunta 4 -->
-      <details>
-        <summary>¿Qué métodos de pago aceptan?</summary>
-        <p>Efectivo y Mercado Pago.</p>
-      </details>
+      <div class="accordion my-2" id="accordionExample">
+        <!-- Pregunta 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              ¿Cuál es el horario de atención?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>De lunes a viernes de 9 a 18hs.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              ¿Como se compra?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Realiza tu pedido con 48 hs de anticipación vía WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              ¿Hacen envíos?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Solo en Avellaneda, Buenos Aires, Zona Sur.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              ¿Qué métodos de pago aceptan?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Efectivo y Mercado Pago.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
     </section>
   </main>
   <!-- Fin de main -->
@@ -69,7 +120,7 @@
   <footer class="font-montserrat ">
     <div class="principal-footer container">
       <section class="logo-footer">
-        <img src="/img/logo.png" alt="logo la posta de juli">
+        <img src="../img/logo.png" alt="logo la posta de juli">
         <p>La Posta de Juli</p>
       </section>
       <section class="navigation-footer">
@@ -84,7 +135,7 @@
       </section>
       <section class="social-footer">
         <h4>Seguinos en</h4>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><img src="/img/instagram_icon.png" alt="">@lapostadejuli</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><img src="../img/instagram_icon.png" alt="">@lapostadejuli</a>
       </section>
     </div>
     <div class="secondary-footer">
@@ -93,6 +144,7 @@
     <div class="sign">
       <p>Diseñado por Jorge Calderón</p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </footer>
 </body>
 </html>
