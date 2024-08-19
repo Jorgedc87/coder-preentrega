@@ -1,0 +1,92 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Asegura un tamaño de fuente base y line-height para todo el documento */
+html {
+  font-size: 100%;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%; 
+}
+
+/* Reinicia los estilos básicos del body */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+/* Asegura que los encabezados no tengan un margen adicional */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Elimina la decoración por defecto de los enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reinicia listas para eliminar los estilos de viñetas y números */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Asegura que las imágenes no se salgan de su contenedor */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Elimina la apariencia predeterminada de botones y inputs */
+button,
+input,
+textarea {
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.navbar-toggler:focus {
+  --bs-navbar-toggler-focus-width: 0; 
+  outline: none; 
+}
+
+/* Asegura que los botones no muestren el borde de enfoque en navegadores más antiguos */
+button:focus, 
+a:focus, 
+input:focus, 
+textarea:focus {
+  outline: none !important;
+}
+/* Elimina las decoraciones de los campos de búsqueda en Safari */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Elimina márgenes de párrafos y otros elementos */
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Agrego margin top al main para separarlo del*/
+main {
+  margin-top: 80px;
+}

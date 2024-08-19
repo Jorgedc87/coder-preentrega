@@ -1,0 +1,62 @@
+// Mixin para manejar el orden en un flex
+@mixin order-items($order-desktop, $order-mobile: 1) {
+  order: $order-mobile;
+
+  @media (min-width: 992px) {
+    order: $order-desktop;
+  }
+}
+
+// Mixin para ocultar elementos en diferentes tamaños de pantalla
+@mixin hide-on($breakpoint) {
+  @if $breakpoint == 'mobile' {
+    @media (max-width: 991.98px) { 
+      display: none;
+    }
+  }
+
+  @else if $breakpoint == 'desktop' {
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+}
+
+// Mixin para ajustar la altura de un elemento en diferentes tamaños de pantalla
+@mixin responsive-height($height-desktop, $height-mobile: auto) {
+  height: $height-desktop; 
+
+  @media (max-width: 991.98px) {
+    height: $height-mobile; 
+  }
+}
+
+// Mixin para ajustar el ancho de un elemento en diferentes tamaños de pantalla
+@mixin responsive-width($width-desktop, $width-mobile: auto) {
+  width: $width-desktop; 
+
+  @media (max-width: 991.98px) {
+    width: $width-mobile; 
+  }
+}
+
+// Mixin para ajustar la dirección del flex en diferentes tamaños de pantalla
+@mixin responsive-flex-direction($direction-desktop, $direction-mobile: row) {
+  display: flex; 
+  flex-direction: $direction-desktop;
+  
+  @media (max-width: 991.98px) { 
+    margin: 2rem auto;
+    flex-direction: $direction-mobile;
+
+    .nav-item{
+      text-align: center;
+      margin: 0 auto;
+      .nav-link{
+        width: 300px;
+        margin: 1rem auto;
+      }
+    }
+  }
+}
+
