@@ -25,9 +25,11 @@
 // Mixin para ajustar la altura de un elemento en diferentes tamaños de pantalla
 @mixin responsive-height($height-desktop, $height-mobile: auto) {
   height: $height-desktop; 
+  z-index: 1000;
 
   @media (max-width: 991.98px) {
     height: $height-mobile; 
+    min-height: $height-desktop;
   }
 }
 
@@ -60,3 +62,45 @@
   }
 }
 
+@mixin responsive-flex-direction-gen($direction-desktop, $direction-mobile: row) {
+  display: flex; 
+  flex-direction: $direction-desktop;
+  
+  @media (max-width: 991.98px) { 
+    flex-direction: $direction-mobile;
+  }
+}
+
+// Mixin para cambiar centrar por start
+@mixin responsive-justify-content($justify-desktop, $justify-mobile: center) {
+  justify-content: $justify-desktop;
+
+  @media (max-width: 991.98px) {
+    justify-content: $justify-mobile;
+  }
+}
+
+
+
+
+/* Clamp para manejar algunos tamaños responsivos de font-size*/
+@mixin responsive-text($min-size, $max-size, $min-vw, $max-vw) {
+  font-size: $min-size;
+  font-size: clamp($min-size, 1vw + 1vh, $max-size);
+  
+  @media (min-width: $min-vw) {
+    font-size: $min-size;
+  }
+
+  @media (min-width: $max-vw) {
+    font-size: $max-size;
+  }
+}
+
+@mixin responsive-img($width-desktop, $width-mobile: 100%) {
+  width: $width-desktop;
+
+  @media (max-width: 991.98px) {
+    width: $width-mobile;
+  }
+}

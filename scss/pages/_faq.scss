@@ -1,0 +1,11 @@
+.faq-section{
+  color: $brown;
+
+  .accordion{
+    max-width: 800px;
+    margin: 0 auto;
+    border: .1rem $brown solid;
+    border-radius: .2rem;
+    filter: drop-shadow(2px 3px 10px #22222275);
+  }
+}

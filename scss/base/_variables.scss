@@ -1,5 +1,7 @@
 /* Paleta de Colores */ 
-$bg-primary: #f7dec7;
+$bg-primary: #fffffe;
+$bg-secondary: #f7dec7;
+$bg-tertiary: #f8d7da;
 $bg-navbar: #4f2912;
 $bg-navbar-mobile: #4f29127a;
 $bg-footer: #efa5be;
@@ -12,3 +14,6 @@ $brown: #542509;
 $white: #fdfdfd;
 $grey: #9797975b;
 
+/* Background-images */
+$hero-home: url('../../img/torta-ricota.png');
+$hero: url('../../img/pasteleria-faq.jpg');

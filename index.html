@@ -13,11 +13,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>La Posta de Juli - Inicio</title>
 </head>
 <body>
-  <!-- Navbar Desktop -->
-  <!-- Navbar Mobile -->
+  <!-- Navbar -->
   <header class="font-montserrat">
     <nav class="navbar navbar-expand-lg">
       <div class="navbar-content container-fluid">
@@ -52,7 +53,7 @@
     
   </header>
 
-  <main>
+  <main class="">
     <!-- Hero -->
     <section class="hero hero-main">
       <div class="title-hero">
@@ -63,45 +64,152 @@
         <img src="./img/logo.png" alt="logo la posta de juli">
       </div>
     </section>
-    <section class="hero hero-main">
-      <div class="title-hero">
-        <h1>La Posta de Juli</h1>
-        <p>¡El sabor de lo casero!</p>
-      </div>
-      <div class="logo-hero">
-        <img src="./img/logo.png" alt="logo la posta de juli">
-      </div>
-    </section>
-    <section class="hero hero-main">
-      <div class="title-hero">
-        <h1>La Posta de Juli</h1>
-        <p>¡El sabor de lo casero!</p>
-      </div>
-      <div class="logo-hero">
-        <img src="./img/logo.png" alt="logo la posta de juli">
-      </div>
-    </section>
-    <section class="hero hero-main">
-      <div class="title-hero">
-        <h1>La Posta de Juli</h1>
-        <p>¡El sabor de lo casero!</p>
-      </div>
-      <div class="logo-hero">
-        <img src="./img/logo.png" alt="logo la posta de juli">
+
+    <!-- Intro -->
+    <section class="intro container">
+      <div class="">
+        <h2 class="text-center my-5">¡Bienvenidos a La Posta de Juli!</h2>
+        <p>En La Posta de Juli, nos dedicamos a llevar el sabor de lo casero a tu mesa. Utilizamos ingredientes de alta calidad y recetas tradicionales para elaborar tortas, tartas y dulces que evocan los sabores de antaño. Cada producto es hecho con cariño y dedicación, buscando siempre ofrecer una experiencia única en cada bocado.</p>
+        <p>Nuestro objetivo es brindarte delicias frescas y auténticas, ideales para cualquier ocasión. Ya sea que quieras disfrutar de un postre especial, celebrar un momento importante o simplemente darte un gusto, en La Posta de Juli encontrarás ese toque de dulzura que hará tu día más especial. ¡Te invitamos a conocernos y a descubrir la magia de nuestros productos!</p>
       </div>
     </section>
 
-    
-   
+    <!-- Productos -->
+    <section class="products">
+      <div class="container mx-auto">
+        <h2 class="features text-center mb-5 mt-2">¡Productos Destacados!</h2>
+        <div class="row grid-products">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="product-card" data-aos="fade-down" data-aos-delay="300">
+              <img src="./img/lemon-pie.jpeg" class="img-fluid" alt="Producto 1">
+              <h3 class="product-title">Lemon Pie</h3>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="product-card"  data-aos="fade-down" data-aos-delay="400">
+              <img src="./img/mini-torta-brownie.png" class="img-fluid" alt="Producto 2">
+              <h3 class="product-title">Mini Torta Brownie</h3>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="product-card"  data-aos="fade-down" data-aos-delay="500">
+              <img src="./img/torta-brownie.jpeg" class="img-fluid" alt="Producto 3">
+              <h3 class="product-title">Torta Brownie</h3>
+            </div>
+          </div>
+
+        </div>
+        <button class="button-primary btn-lg btn-block mt-4">Ver más productos</button>
+      </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="rrss py-5">
+      <div class="container mx-auto">
+        <h2 class="text-center mb-5 mt-2">Seguinos en nuestro Instagram</h2>
+          <a class="rrss-card" href="https://www.instagram.com/lapostadejuli"  data-aos="fade-up"data-aos-duration="1000">
+            <img src="./img/instagram_icon.png" class="img-fluid" alt="Instagram 1">
+            <span>@lapostadejuli</span>
+          </a>
+      </div>
+    </section>
+
+    <!-- Importante -->
+    <section class="info py-5">
+      <div class="container mx-auto">
+        <h2 class="text-center mb-5 mt-2">Información importante</h2>
+        <div class="info-content my-5">
+          <div class="info-item" data-aos="zoom-in-right" data-aos-delay="300">
+            <div class="info-title pt-3">
+              <img src="./img/whatsapp-logo.webp" alt="logo whatsapp">
+              <strong>Pedí por WhatsApp</strong>
+            </div>
+            <p>Lunes a viernes<br> de 9:00 a 20:00</p>
+          </div>
+          <div class="info-item" data-aos="zoom-in" data-aos-delay="400">
+            <div class="info-title pt-3">
+              <img src="./img/watch.png" alt="logo reloj">
+              <strong>Solicitá el producto</strong>
+            </div>
+            <p>Con 48 horas hábiles<br> de anticipación</p>
+          </div>
+          <div class="info-item" data-aos="zoom-in-left" data-aos-delay="500">
+            <div class="info-title pt-3">
+              <img src="./img/credit-card.png" alt="">
+              <strong>Aceptamos medios de pago:</strong>
+            </div>
+            <p>Transferencias<br> y MercadoPago</p>
+          </div>
+       </div>
+      </div>
+    </section>
+
+    <!-- Nuestros clientes -->
+    <section class="testimony font-montserrat pb-5">
+      <div class="container">
+        <h2>Nuestros clientes dicen</h2>
+         <div class="ours-clients my-5">
+            <div class="client-box mx-auto" data-aos="flip-down" data-aos-delay="300" data-aos-duration="1500">
+              <div class="client-avatar">
+                <img src="./img/Perfil1.webp" alt="client avatar">
+              </div>
+              <div class="text-start mb-3 fw-bold">
+                John Doe:
+              </div>
+              <div class="text-start">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo sagittis placerat. Duis eu convallis massa. Integer condimentum mauris a lacinia egestas. Praesent porttitor libero enim, vitae dignissim dui luctus in. Nunc malesuada nulla a mi rutrum pharetra.
+              </div>
+            </div>
+         </div>
+      </div>
+    </section>
+
+  </main>
+
   <!-- Footer -->
-  <footer class="font-montserrat ">
-      <p>© 2024 La Posta de Juli - Todos los derechos reservados</p>
+  <footer class="font-montserrat pt-4" id="footer">
+    <div class="container">
+        <div class="row text-center text-md-left">
+            <!-- Izquierda -->
+            <div class="logo-footer col-md-4 mb-3 mb-md-0">
+                <img src="./img/logo.png" alt="La Posta de Juli" class="mb-2">
+                <p>La Posta de Juli</p>
+            </div>
+            <!-- Centro -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h5>Navegación</h5>
+                <ul class="list-unstyled">
+                    <li class="mt-1"><a href="./">Inicio</a></li>
+                    <li class="mt-1"><a href="./pages/productos.html">Productos</a></li>
+                    <li class="mt-1"><a href="./pages/nosotros.html">Nosotros</a></li>
+                    <li class="mt-1"><a href="./pages/preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li class="mt-1"><a href="./pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Derecha -->
+            <div class="rrss-footer col-md-4 mb-3 mb-md-0">
+                <h5>Seguinos en</h5>
+                <a href="https://www.instagram.com/lapostadejuli" class="">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="max-width: 30px;">
+                    @lapostadejuli
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mt-3">
+                <p>&copy; 2024 La Posta de Juli - Todos los derechos reservados</p>
+            </div>
+        </div>
     </div>
-    <div class="sign">
-      <p>Diseñado por Jorge Calderón</p>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </footer>
+  <div class="sign font-montserrat">
+    <p>Diseñado por Jorge Calderón</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

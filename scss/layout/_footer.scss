@@ -1,0 +1,49 @@
+footer{
+  background-color: $bg-footer;
+  color: $brown;
+
+  .logo-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img{
+      width: 100px;
+      margin: 0 auto;
+    }
+    p{
+      letter-spacing: .1rem;
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: $brown;
+
+    &:hover{
+      color: $white;
+    }
+  }
+
+  .rrss-footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: $brown;
+    margin-top: 1rem;
+  }
+}
+
+.sign{
+  background-color: #148e39;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  color: $white;
+  font-size: .7rem;
+  p{
+    margin: 0;
+  }
+}

@@ -1,0 +1,43 @@
+
+.contact-form{
+  input {
+    width: 100%;
+    padding: 5px 10px;
+    border: #4f2912 1px solid !important;
+    border-radius: 5px;
+    background-color: #fff5f6;
+    box-shadow: 2px 3px 12px 0 #361c0c8b;
+  }
+  
+  label{
+    text-align: left !important;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 5px 10px;
+    border: #4f2912 1px solid !important;
+    border-radius: 5px;
+    background-color: #fff5f6;
+    box-shadow: 2px 3px 12px 0 #361c0c8b;
+  }
+}
+
+.form-button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.btn-submit {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4f2912;
+  color: white;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: all 0.3s ease-in-out;
+}

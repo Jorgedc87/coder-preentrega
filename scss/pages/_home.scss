@@ -1,3 +1,197 @@
-.b{
-  font-size: 1em sans-serif;
+main{
+  background-color: $bg-secondary;
+  color: $brown;
+  font-family: "Montserrat", sans-serif;
+}
+
+.products {
+  position: relative;
+  background-color: $bg-tertiary;
+  margin-top: 4rem; 
+  padding: 2rem !important;
+  text-align: center;
+  color: #333;
+
+  /* Pseudo-elemento para la diagonal */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; 
+    background-color: inherit; 
+    transform: skewY(-1deg); 
+    transform-origin: top left;
+    z-index: 1;
+  }
+
+  /* Ajuste del contenido de la sección para evitar que se superponga con la diagonal */
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .features{
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .grid-products{
+    margin: 0 auto;
+    width: 100%;
+
+    .product-card{
+      height: 280px;
+      width: 280px;
+      margin: 0 auto;
+      position: relative;
+      transition: all 0.5s;
+      filter: grayscale(80%);      
+      border-radius: 5px;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-title {
+        position: absolute;
+        font-size: 1em;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+        background: $brown;
+        
+        color: white; 
+        padding: 10px 0; 
+        margin: 0;
+      }
+
+      &:hover{
+        filter: grayscale(0);
+        cursor: pointer;
+        transition: all 0.5s;
+
+      }
+    }
+  }
+}
+
+.rrss{
+  width: 100%;
+  background-image: url('../../img/background-instagram.jpg');
+  background-size: cover;
+
+  h2{
+    filter: drop-shadow(0 1px 4px rgba(226, 248, 145, 0.5));
+  }
+  .rrss-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: .6rem;
+    text-decoration: none;
+    color: inherit;
+    
+    img{
+      width: 50px;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+      
+    }
+    
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
+    span{
+      font-size: 1.3em;
+      filter: drop-shadow(0 1px 4px rgba(255, 255, 255, 0.5));
+      
+    }
+    
+    &:hover{
+      cursor: pointer;
+      img{
+        transform: rotate(5deg) scale(1.1);
+        transition: all .5s;
+      }
+      span{
+        transform: rotate(-5deg) scale(1.1);
+        color: $brown;
+        
+        transition: all .5s;
+      }
+    }
+  }
+}
+
+.info{
+  background-color: $bg-tertiary;
+
+  @include responsive-text(.1rem, 1rem, 320, 992);
+
+  .info-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    .info-item{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 10px;
+      .info-title{
+        display: flex;
+        gap: .3rem;
+
+        @include responsive-flex-direction-gen(row, column);
+      }
+
+      img{
+        @include responsive-img(25px, 15px);
+        height: 100%;
+        margin: 0 auto;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2){
+        border-right: 1px solid #3b3b3b4f;
+      }
+      
+
+    }
+
+  }
+}
+  
+.testimony{
+  background-color: $bg-tertiary;
+
+  h2{
+    text-align: center;
+  }
+
+  .client-box {
+    background-color: #ffffff;
+    position: relative;
+    width: 90%;
+    padding: 2rem 6rem;
+    border: #efa5be 2px solid;
+    box-shadow: 5px 4px 13px 0 #361c0c;
+
+    .client-avatar {
+      width: 100px;
+      position: absolute;
+      left: -2.5rem;
+      top: -2.5rem;
+    }
+  }
 }

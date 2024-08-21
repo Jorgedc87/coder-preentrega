@@ -89,7 +89,7 @@ dd {
 
 /* Agrego margin top al main para separarlo del*/
 main {
-  margin-top: 80px;
+  margin-top: 65px;
 }
 
 .font-montserrat {
@@ -97,8 +97,21 @@ main {
 }
 
 /* Paleta de Colores */
-.button {
+/* Background-images */
+/* Clamp para manejar algunos tamaños responsivos de font-size*/
+.button-primary {
+  background-color: #4f2912;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.button-primary:hover {
+  background-color: #915129;
 }
 
 .navbar {
@@ -107,6 +120,7 @@ main {
   margin: 0 !important;
   width: 100%;
   --bs-navbar-padding-y: 0 !important;
+  z-index: 1000;
 }
 .navbar .navbar-content {
   background-color: #4f2912;
@@ -115,10 +129,12 @@ main {
   padding-right: 0;
   padding-left: 0;
   height: 65px;
+  z-index: 1000;
 }
 @media (max-width: 991.98px) {
   .navbar .navbar-content {
     height: auto;
+    min-height: 65px;
   }
 }
 .navbar .navbar-content .logo-desktop {
@@ -137,8 +153,9 @@ main {
   }
 }
 .navbar .navbar-content .logo-mobile {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
+  padding: 10px;
   margin-left: 0.5rem;
 }
 @media (min-width: 992px) {
@@ -210,8 +227,367 @@ main {
   color: #f0a500;
 }
 
-.b {
-  font-size: 1em sans-serif;
+/* Estilos hero */
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.hero .logo-hero {
+  display: flex;
+  height: 100%;
+  width: 300px;
+}
+.hero .logo-hero img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+.hero .title-hero {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2rem;
+  line-height: 1.2rem;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+.hero .title-hero h1 {
+  color: #4f2912;
+  background-color: white;
+  padding: 0.6rem;
+  rotate: 4deg;
+  margin-bottom: 2rem;
+  font-size: 1.5em !important;
+}
+.hero .title-hero p {
+  background-color: rgba(76, 42, 20, 0.8431372549);
+  padding: 0.6rem;
+  rotate: -4deg;
+}
+
+.hero-faqs {
+  background-image: url(../img/pasteleria-faq.jpg);
+  background-size: cover;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.hero-faqs h1 {
+  color: #4f2912;
+  background-color: white;
+  padding: 0.4rem 0.7rem;
+  rotate: 4deg;
+  margin-bottom: 1rem;
+  font-size: 1.5em !important;
+}
+.hero-faqs p {
+  background-color: rgba(76, 42, 20, 0.8431372549);
+  font-size: 1.5em !important;
+  padding: 0.4rem 0.7rem;
+  rotate: -4deg;
+}
+
+.hero-main {
+  background-image: url("../../img/torta-ricota.png");
+  background-size: cover;
+}
+
+footer {
+  background-color: #efa5be;
+  color: #542509;
+}
+footer .logo-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .logo-footer img {
+  width: 100px;
+  margin: 0 auto;
+}
+footer .logo-footer p {
+  letter-spacing: 0.1rem;
+}
+footer a {
+  text-decoration: none;
+  color: #542509;
+}
+footer a:hover {
+  color: #fdfdfd;
+}
+footer .rrss-footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: #542509;
+  margin-top: 1rem;
+}
+
+.sign {
+  background-color: #148e39;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  color: #fdfdfd;
+  font-size: 0.7rem;
+}
+.sign p {
+  margin: 0;
+}
+
+main {
+  background-color: #f7dec7;
+  color: #542509;
+  font-family: "Montserrat", sans-serif;
+}
+
+.products {
+  position: relative;
+  background-color: #f8d7da;
+  margin-top: 4rem;
+  padding: 2rem !important;
+  text-align: center;
+  color: #333;
+  /* Pseudo-elemento para la diagonal */
+  /* Ajuste del contenido de la sección para evitar que se superponga con la diagonal */
+}
+.products::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: inherit;
+  transform: skewY(-1deg);
+  transform-origin: top left;
+  z-index: 1;
+}
+.products .container {
+  position: relative;
+  z-index: 2;
+}
+.products .features {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.products .grid-products {
+  margin: 0 auto;
+  width: 100%;
+}
+.products .grid-products .product-card {
+  height: 280px;
+  width: 280px;
+  margin: 0 auto;
+  position: relative;
+  transition: all 0.5s;
+  filter: grayscale(80%);
+  border-radius: 5px;
+}
+.products .grid-products .product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.products .grid-products .product-card .product-title {
+  position: absolute;
+  font-size: 1em;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  background: #542509;
+  color: white;
+  padding: 10px 0;
+  margin: 0;
+}
+.products .grid-products .product-card:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.rrss {
+  width: 100%;
+  background-image: url("../../img/background-instagram.jpg");
+  background-size: cover;
+}
+.rrss h2 {
+  filter: drop-shadow(0 1px 4px rgba(226, 248, 145, 0.5));
+}
+.rrss .rrss-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+.rrss .rrss-card img {
+  width: 50px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+.rrss .rrss-card a {
+  text-decoration: none;
+  color: inherit;
+}
+.rrss .rrss-card span {
+  font-size: 1.3em;
+  filter: drop-shadow(0 1px 4px rgba(255, 255, 255, 0.5));
+}
+.rrss .rrss-card:hover {
+  cursor: pointer;
+}
+.rrss .rrss-card:hover img {
+  transform: rotate(5deg) scale(1.1);
+  transition: all 0.5s;
+}
+.rrss .rrss-card:hover span {
+  transform: rotate(-5deg) scale(1.1);
+  color: #542509;
+  transition: all 0.5s;
+}
+
+.info {
+  background-color: #f8d7da;
+  font-size: 0.1rem;
+  font-size: clamp(0.1rem, 1vw + 1vh, 1rem);
+}
+@media (min-width: 320) {
+  .info {
+    font-size: 0.1rem;
+  }
+}
+@media (min-width: 992) {
+  .info {
+    font-size: 1rem;
+  }
+}
+.info .info-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.info .info-content .info-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 10px;
+}
+.info .info-content .info-item .info-title {
+  display: flex;
+  gap: 0.3rem;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 991.98px) {
+  .info .info-content .info-item .info-title {
+    flex-direction: column;
+  }
+}
+.info .info-content .info-item img {
+  width: 25px;
+  height: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 991.98px) {
+  .info .info-content .info-item img {
+    width: 15px;
+  }
+}
+.info .info-content .info-item:nth-child(1), .info .info-content .info-item:nth-child(2) {
+  border-right: 1px solid rgba(59, 59, 59, 0.3098039216);
+}
+
+.testimony {
+  background-color: #f8d7da;
+}
+.testimony h2 {
+  text-align: center;
+}
+.testimony .client-box {
+  background-color: #ffffff;
+  position: relative;
+  width: 90%;
+  padding: 2rem 6rem;
+  border: #efa5be 2px solid;
+  box-shadow: 5px 4px 13px 0 #361c0c;
+}
+.testimony .client-box .client-avatar {
+  width: 100px;
+  position: absolute;
+  left: -2.5rem;
+  top: -2.5rem;
+}
+
+.about-section {
+  color: #542509;
+}
+
+.faq-section {
+  color: #542509;
+}
+.faq-section .accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 0.1rem #542509 solid;
+  border-radius: 0.2rem;
+  filter: drop-shadow(2px 3px 10px rgba(34, 34, 34, 0.4588235294));
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 5px 10px;
+  border: #4f2912 1px solid !important;
+  border-radius: 5px;
+  background-color: #fff5f6;
+  box-shadow: 2px 3px 12px 0 rgba(54, 28, 12, 0.5450980392);
+}
+.contact-form label {
+  text-align: left !important;
+}
+.contact-form textarea {
+  width: 100%;
+  padding: 5px 10px;
+  border: #4f2912 1px solid !important;
+  border-radius: 5px;
+  background-color: #fff5f6;
+  box-shadow: 2px 3px 12px 0 rgba(54, 28, 12, 0.5450980392);
+}
+
+.form-button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.btn-submit {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4f2912;
+  color: white;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=styles.css.map */

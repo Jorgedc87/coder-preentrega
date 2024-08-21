@@ -1,0 +1,81 @@
+/* Estilos hero */
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  .logo-hero{
+    display: flex;
+    height: 100%;
+    width: 300px;
+  }
+  
+  .logo-hero img{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+  }
+  
+  .title-hero{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .2rem;
+    line-height: 1.2rem;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+  }
+  
+  .title-hero h1{
+    color: #4f2912;
+    background-color: white;
+    padding: .6rem;
+    rotate: 4deg;
+    margin-bottom: 2rem;
+    font-size: 1.5em !important;
+  }
+  
+  .title-hero p{
+    background-color: #4c2a14d7;
+    padding: .6rem;
+    rotate: -4deg;
+  }
+}
+
+.hero-faqs {
+  background-image: url(../img/pasteleria-faq.jpg);
+  background-size: cover;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: .2rem;
+  font-family: 'Montserrat', sans-serif;
+
+  h1 {
+    color: #4f2912;
+    background-color: white;
+    padding: .4rem .7rem;
+
+    rotate: 4deg;
+    margin-bottom: 1rem;
+    font-size: 1.5em !important;
+  }
+
+  p {
+    background-color: #4c2a14d7;
+    font-size: 1.5em !important;
+    padding: .4rem .7rem;
+    rotate: -4deg;
+  }
+}
+
+.hero-main{
+  background-image: $hero-home;
+  background-size: cover;
+}

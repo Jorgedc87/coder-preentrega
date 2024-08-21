@@ -16,32 +16,37 @@
   <title>La Posta de Juli</title>
 </head>
 <body>
-  <!-- Navbar Desktop -->
-  <header class="font-montserrat navbar-desktop">
-    <nav class="">
-      <ul>
-        <li><a href="../pages/productos.html">Productos</a></li>
-        <li><a href="../pages/nosotros.html">Nosotros</a></li>
-        <li><a href="../" class="img-header"><img src="../img/logo.png" alt="logo la posta de juli"></a></li>
-        <li><a href="../pages/preguntas-frecuentes.html" class="faq">Preguntas Frecuentes</a></li>
-        <li><a href="../pages/contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Navbar Mobile -->
-  <header class="font-montserrat navbar-mobile">
-    <nav class="">
-      <div class="text-center">
-        <img src="../img/logo.png" alt="logo la posta de juli">
+  <!-- Navbar -->
+  <header class="font-montserrat">
+    <nav class="navbar navbar-expand-lg">
+      <div class="navbar-content container-fluid">
+        <img src="../img/logo.png" alt="logo la posta de juli" class="logo-mobile">
+        <button class="burger-button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-items me-auto mb-2 mb-lg-0">
+            <li class="home-link nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+            </li>
+            <li class="product-link nav-item">
+              <a class="nav-link active" aria-current="page" href="../pages/productos.html">Productos</a>
+            </li>
+            <li class="aboutUs-link nav-item">
+              <a class="nav-link active" aria-current="page" href="../pages/nosotros.html">Nosotros</a>
+            </li>
+            <li class="logo-link nav-item">
+              <a class="nav-link active" aria-current="page" href="/"><img src="../img/logo.png" alt="logo la posta de juli" class="logo-desktop"></a>
+            </li>
+            <li class="faq-link nav-item">
+              <a class="nav-link active" aria-current="page" href="../pages/preguntas-frecuentes.html">Preguntas frecuentes</a>
+            </li>
+            <li class="contactUs-link nav-item">
+              <a class="nav-link active" aria-current="page" href="../pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li> |
-        <li><a href="../pages/productos.html">Productos</a></li> |
-        <li><a href="../pages/nosotros.html">Nosotros</a></li> |
-        <li><a href="../pages/preguntas-frecuentes.html">FAQ</a></li> |
-        <li><a href="../pages/contacto.html">Contacto</a></li>
-      </ul>
     </nav>
   </header>
 
@@ -54,11 +59,14 @@
     </section>
 
     <!-- Preguntas y respuestas -->
-    <section class="section-faqs">
+    <section class="faq-section container py-3">
       <!-- Title -->
-      <h2>Preguntas y Respuestas</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo sagittis placerat. Duis eu convallis massa. Integer condimentum mauris a lacinia egestas. Praesent porttitor libero enim, vitae dignissim dui luctus in. Nunc malesuada nulla a mi rutrum pharetra. </p>
-      <div class="accordion my-2" id="accordionExample">
+      <div class="col-12 text-center py-4 font-montserrat">
+        <h2>Preguntas y Respuestas</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo sagittis placerat. Duis eu convallis massa. Integer condimentum mauris a lacinia egestas. Praesent porttitor libero enim, vitae dignissim dui luctus in. Nunc malesuada nulla a mi rutrum pharetra. </p>
+      </div>
+
+      <div class="accordion " id="accordionExample">
         <!-- Pregunta 1 -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -116,35 +124,47 @@
     </section>
   </main>
   <!-- Fin de main -->
+  
   <!-- Footer -->
-  <footer class="font-montserrat ">
-    <div class="principal-footer container">
-      <section class="logo-footer">
-        <img src="../img/logo.png" alt="logo la posta de juli">
-        <p>La Posta de Juli</p>
-      </section>
-      <section class="navigation-footer">
-        <h4>Navegación</h4>
-        <ul>
-          <li>Inicio</li>
-          <li>Productos</li>
-          <li>Nosotros</li>
-          <li>Preguntas Frecuentes</li>
-          <li>Contacto</li>
-        </ul>
-      </section>
-      <section class="social-footer">
-        <h4>Seguinos en</h4>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><img src="../img/instagram_icon.png" alt="">@lapostadejuli</a>
-      </section>
+  <footer class="font-montserrat pt-4" id="footer">
+    <div class="container">
+        <div class="row text-center text-md-left">
+            <!-- Izquierda -->
+            <div class="logo-footer col-md-4 mb-3 mb-md-0">
+                <img src="../img/logo.png" alt="La Posta de Juli" class="mb-2">
+                <p>La Posta de Juli</p>
+            </div>
+            <!-- Centro -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h5>Navegación</h5>
+                <ul class="list-unstyled">
+                    <li class="mt-1"><a href="/">Inicio</a></li>
+                    <li class="mt-1"><a href="./productos.html">Productos</a></li>
+                    <li class="mt-1"><a href="./nosotros.html">Nosotros</a></li>
+                    <li class="mt-1"><a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li class="mt-1"><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Derecha -->
+            <div class="rrss-footer col-md-4 mb-3 mb-md-0">
+                <h5>Seguinos en</h5>
+                <a href="https://www.instagram.com/lapostadejuli" class="">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="max-width: 30px;">
+                    @lapostadejuli
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mt-3">
+                <p>&copy; 2024 La Posta de Juli - Todos los derechos reservados</p>
+            </div>
+        </div>
     </div>
-    <div class="secondary-footer">
-      <p>© 2024 La Posta de Juli - Todos los derechos reservados</p>
-    </div>
-    <div class="sign">
-      <p>Diseñado por Jorge Calderón</p>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </footer>
+  <div class="sign font-montserrat">
+    <p>Diseñado por Jorge Calderón</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,3 +1,14 @@
-.button{
+.button-primary{
+  background-color: #4f2912;
+  text-transform: uppercase;
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 5px;
   border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover{
+    background-color: #915129;
+  }
 }

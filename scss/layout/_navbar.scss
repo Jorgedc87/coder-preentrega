@@ -4,6 +4,7 @@
   margin: 0 !important;
   width: 100%;
   --bs-navbar-padding-y: 0 !important;
+  z-index: 1000;
 
   .navbar-content{
     background-color: $bg-navbar;
@@ -27,8 +28,9 @@
     }
 
     .logo-mobile{
-      width: 50px;
-      height: 50px;
+      width: 75px;
+      height: 75px;
+      padding: 10px;
       margin-left: .5rem;
       @include hide-on('desktop');
     }
