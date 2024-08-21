@@ -1,1 +1,8 @@
+#Vercel
 .vercel
+
+#enviroments
+.env
+
+#Node modules
+node_modules/
