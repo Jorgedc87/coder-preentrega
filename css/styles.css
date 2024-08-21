@@ -360,7 +360,6 @@ main {
   text-align: center;
   color: #333;
   /* Pseudo-elemento para la diagonal */
-  /* Ajuste del contenido de la sección para evitar que se superponga con la diagonal */
 }
 .products::before {
   content: "";
@@ -374,49 +373,59 @@ main {
   transform-origin: top left;
   z-index: 1;
 }
-.products .container {
-  position: relative;
-  z-index: 2;
+.products a {
+  text-decoration: none !important;
 }
-.products .features {
+.products p {
+  font-size: 0.75em;
   text-transform: uppercase;
-  font-weight: 400;
+  letter-spacing: 2px;
+  padding: 30px 10px;
 }
-.products .grid-products {
-  margin: 0 auto;
-  width: 100%;
-}
-.products .grid-products .product-card {
-  height: 280px;
-  width: 280px;
-  margin: 0 auto;
+.products button {
+  background: transparent;
+  outline: none;
   position: relative;
-  transition: all 0.5s;
-  filter: grayscale(80%);
-  border-radius: 5px;
+  border: 2px solid #111;
+  padding: 15px 100px;
+  overflow: hidden;
+  color: #111;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
-.products .grid-products .product-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.products .grid-products .product-card .product-title {
-  position: absolute;
-  font-size: 1em;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  width: 100%;
-  background: #542509;
-  color: white;
-  padding: 10px 0;
-  margin: 0;
-}
-.products .grid-products .product-card:hover {
-  filter: grayscale(0);
+.products button:hover {
   cursor: pointer;
-  transition: all 0.5s;
+  background-color: #efa5be;
+  border-color: #efa5be;
+  color: #111;
+}
+.products button:before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 1.1em;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 0.8em;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all 0.3s ease-in-out;
+}
+.products button:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.products button div {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 0.8em;
+  transition: all 0.3s ease-in-out;
+}
+.products button:hover div {
+  opacity: 0;
+  transform: translate(100%, 0);
 }
 
 .rrss {
@@ -550,6 +559,14 @@ main {
   border-radius: 0.2rem;
   filter: drop-shadow(2px 3px 10px rgba(34, 34, 34, 0.4588235294));
 }
+.faq-section a {
+  color: #542509;
+  font-style: italic;
+  font-weight: 500;
+}
+.faq-section a:hover {
+  color: #7e1596;
+}
 
 .contact-form input {
   width: 100%;
@@ -588,6 +605,96 @@ main {
   cursor: pointer;
   margin: 20px 0;
   transition: all 0.3s ease-in-out;
+}
+
+.products-section {
+  position: relative;
+  padding: 2rem !important;
+  color: #542509;
+}
+.products-section .text-bg-primary {
+  background-color: #ff0000 !important;
+  font-size: 0.6rem;
+}
+.products-section h2 {
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #542509;
+}
+.products-section h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.products-section h3 span {
+  margin-right: -3rem;
+  margin-left: 0.5rem;
+}
+
+/* Ajuste del contenido de la sección para evitar que se superponga con la diagonal */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.features {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.grid-products {
+  margin: 0 auto;
+  width: 100%;
+}
+.grid-products .product-card {
+  height: 280px;
+  width: 280px;
+  margin: 0 auto;
+  position: relative;
+  transition: all 0.5s;
+}
+.grid-products .product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.grid-products .product-card .product-title {
+  position: absolute;
+  font-size: 1em;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  background: #542509;
+  color: white;
+  padding: 10px 0;
+  margin: 0;
+}
+.grid-products .product-card:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.product-card {
+  border: 3px solid transparent;
+  border-radius: 0.4rem;
+}
+.product-card:hover {
+  border: 3px solid #efa5be;
+  width: 280px;
+  overflow: hidden;
+}
+.product-card:hover img {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+.product-card:hover ~ .product-card, .product-card:hover:not(:hover) {
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+.product-card a {
+  text-decoration: none !important;
+  color: #542509;
 }
 
 /*# sourceMappingURL=styles.css.map */

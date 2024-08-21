@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>La Posta de Juli</title>
 </head>
 <body>
@@ -61,78 +63,86 @@
     </section>
 
     <!-- Sección Tortas -->
-    <section class="section-productos">
-      <!-- Title -->
-      <h2>Tortas</h2>
-
-      <div class="row container mx-auto font-montserrat">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-          <div class="card card-item">
-            <img src="../img/torta-ricota.png" alt="torta ricota" class="card--img">
-            <p>Torta ricota</p>
+    <!-- Productos -->
+    <section class="products-section">
+      <div class="container mx-auto">
+        <h2 class="text-left mb-5">Tortas</h2>
+        <div class="row grid-products">
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+            <div class="product-card">
+              <img src="../img/productos/tortas/lemon-pie.jpeg" class="img-fluid" alt="Producto 1">
+              <h3 class="product-title">Lemon Pie</h3>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-          <div class="card card-item">
-            <img src="../img/torta-brownie.jpeg" alt="torta brownie" class="card--img">
-            <p>Torta Brownie</p>
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-down" data-aos-delay="400">
+            <div class="product-card" >
+              <img src="../img/productos/tortas/mini-torta-brownie.png" class="img-fluid" alt="Producto 2">
+              <h3 class="product-title">Mini Torta Brownie</h3>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-          <div class="card card-item">
-            <img src="../img/mini-torta-brownie.png" alt="mini torta" class="card--img">
-            <p>Mini Torta</p>
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-down" data-aos-delay="500">
+            <div class="product-card" >
+              <img src="../img/productos/tortas/torta_choco.jfif" class="img-fluid" alt="Producto 3">
+              <h3 class="product-title">Torta Brownie</h3>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-          <div class="card card-item">
-            <img src="../img/lemon-pie.jpeg" alt="lemon pie" class="card--img">
-            <p>Lemon pie</p>
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+            <div class="product-card">
+              <img src="../img/productos/tortas/torta-ricota.jpeg" class="img-fluid" alt="Producto 1">
+              <h3 class="product-title">Torta de ricota</h3>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-down" data-aos-delay="400">
+            <div class="product-card" >
+              <img src="../img/productos/tortas/pastafrola.jfif" class="img-fluid" alt="Producto 2">
+              <h3 class="product-title">Pastafrola <span class="badge text-bg-primary">Nueva</span></h3>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Sección Tortas -->
-    <section class="section-productos">
-      <!-- Title -->
-      <h2>Biscochuelos</h2>
+    <!-- Sección Budines -->
+    <!-- Productos -->
+    <section class="products-section">
+      <div class="container mx-auto">
+        <h2 class="text-left mb-5">Budines</h2>
+        <div class="row grid-products">
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+            <div class="product-card">
+              <div>
+                <img src="../img/productos/budines/budin_choco.jfif" class="img-fluid" alt="Producto 1">
+              </div>
+              <h3 class="product-title">Budin de chocolate</h3>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-down" data-aos-delay="400">
+            <div class="product-card" >
+              <img src="../img/productos/budines/budin_marmo.jfif" class="img-fluid" alt="Producto 2">
+              <h3 class="product-title">Budin marmolado</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <div class="row container mx-auto font-montserrat">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-          <div class="card card-item">
-            <img src="../img/torta-ricota.png" alt="torta ricota" class="card--img">
-            <p>Torta ricota</p>
+    <!-- Sección Variedades -->
+    <!-- Productos -->
+    <section class="products-section">
+      <div class="container mx-auto">
+        <h2 class="text-left mb-5">Variedades</h2>
+        <div class="row grid-products">
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+            <div class="product-card">
+              <img src="../img/productos/variedad/alfajores_maizena.jfif" class="img-fluid" alt="Producto 1">
+              <h3 class="product-title">Alfajores de maicena</h3>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-          <div class="card card-item">
-            <img src="../img/torta-brownie.jpeg" alt="torta brownie" class="card--img">
-            <p>Torta Brownie</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-          <div class="card card-item">
-            <img src="../img/mini-torta-brownie.png" alt="mini torta" class="card--img">
-            <p>Mini Torta</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-          <div class="card card-item">
-            <img src="../img/lemon-pie.jpeg" alt="lemon pie" class="card--img">
-            <p>Lemon pie</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-          <div class="card card-item">
-            <img src="../img/mini-torta-brownie.png" alt="mini torta" class="card--img">
-            <p>Mini Torta</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-          <div class="card card-item">
-            <img src="../img/lemon-pie.jpeg" alt="lemon pie" class="card--img">
-            <p>Lemon pie</p>
+          <div class="col-12 col-md-6 col-lg-4 mb-4"  data-aos="fade-down" data-aos-delay="400">
+            <div class="product-card" >
+              <img src="../img/productos/variedad/cupcake_choco.jfif" class="img-fluid" alt="Producto 2">
+              <h3 class="product-title">Cupcakes de chocolate</h3>
+            </div>
           </div>
         </div>
       </div>
@@ -181,5 +191,9 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
