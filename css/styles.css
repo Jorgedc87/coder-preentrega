@@ -22,6 +22,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
 }
 
 /* Asegura que los encabezados no tengan un margen adicional */
@@ -335,7 +336,7 @@ footer .rrss-footer a {
 }
 
 .sign {
-  background-color: #148e39;
+  background-color: #f76377;
   display: flex;
   justify-content: center;
   padding: 10px 0;
