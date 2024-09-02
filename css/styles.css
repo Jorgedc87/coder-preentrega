@@ -111,10 +111,6 @@ main {
   cursor: pointer;
   transition: all 0.5s;
 }
-.button-primary:hover {
-  background-color: #915129;
-}
-
 .whatsapp-link {
   position: fixed;
   width: 50px;
@@ -761,6 +757,28 @@ main {
 .product-card a {
   text-decoration: none !important;
   color: #542509;
+}
+
+.error404 {
+  background-color: #f7dec7;
+}
+.error404 a {
+  text-decoration: none;
+}
+
+.error-code {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #915129;
+}
+.error-code span {
+  color: #4f2912;
+}
+
+.lead {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #4f2912;
 }
 
 /*# sourceMappingURL=styles.css.map */
